@@ -1,6 +1,6 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run max-digit
 
-# You have a number and you need to determine which digit in this number is the biggest.
+# You have a number, and you need to determine which digit in this number is the biggest.
 # 
 # Input:A positive int.
 # 
@@ -11,7 +11,13 @@
 
 def max_digit(a: int) -> int:
     # your code here
-    return None
+    max_num = 0
+    num_string = str(a)
+    for digit in num_string:
+        if int(digit) > max_num:
+            max_num = int(digit)
+    return max_num
+
 
 print('Example:')
 print(max_digit(10))
