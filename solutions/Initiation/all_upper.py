@@ -13,7 +13,12 @@
 
 def is_all_upper(text: str) -> bool:
     # your code here
-    return False
+    new_text = text.replace(" ", "")
+    if len(new_text) == 0:
+        return True
+    elif new_text.isnumeric():
+        return True
+    return new_text.isupper()
 
 
 print("Example:")
