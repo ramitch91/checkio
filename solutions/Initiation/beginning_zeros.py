@@ -1,6 +1,7 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run beginning-zeros
 
-# You have a string that consist only of digits. You need to find how many zero digits ("0") are at the beginning of the given string.
+# You have a string that consist only of digits. You need to find how many zero digits ("0") are at the
+# beginning of the given string.
 # 
 # Input:A string, that consist of digits.
 # 
@@ -13,7 +14,14 @@
 
 def beginning_zeros(a: str) -> int:
     # your code here
-    return None
+    counter = 0
+    for digit in a:
+        if digit != "0":
+            break
+        else:
+            counter += 1
+    return counter
+
 
 print('Example:')
 print(beginning_zeros('10'))
