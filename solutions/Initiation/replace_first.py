@@ -1,6 +1,7 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run replace-first
 
-# In a given list the first element should become the last one. An empty list or list with only one element should stay the same.
+# In a given list the first element should become the last one. An empty list or list with only one element should
+# stay the same.
 # 
 # 
 # 
@@ -16,6 +17,11 @@ from typing import Iterable
 
 def replace_first(items: list) -> Iterable:
     # your code here
+    if len(items) < 2:
+        return items
+    first_item = items.pop(0)
+    items.append(first_item)
+
     return items
 
 
