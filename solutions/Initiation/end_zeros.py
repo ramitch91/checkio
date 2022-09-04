@@ -12,8 +12,11 @@
 def end_zeros(num: int) -> int:
     zeros = 0
     string = str(num)
-    for char in string:
-        if char == "0":
+    reversed_string = reversed(string)
+    for char in reversed_string:
+        if char != "0":
+            return zeros
+        else:
             zeros += 1
     return zeros
 
