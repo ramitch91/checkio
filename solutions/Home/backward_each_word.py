@@ -12,12 +12,9 @@
 # END_DESC
 
 def backward_string_by_word(text: str) -> str:
-    modified_list = []
-    new_list = text.split()
-    for x in new_list:
-        modified_list.append(x.reverse())
-    text = " ".join(modified_list)
-    return text
+    split_text = text.split(' ')
+    modified_list = (x[::-1] for x in split_text)
+    return " ".join(modified_list)
 
 
 if __name__ == '__main__':
