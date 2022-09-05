@@ -15,7 +15,7 @@
 
 def between_markers(text: str, start: str, end: str) -> str:
     # your code here
-    return None
+    return text[text.index(start) + 1:text.index(end)]
 
 print('Example:')
 print(between_markers('What is >apple<', '>', '<'))
