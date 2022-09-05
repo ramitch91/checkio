@@ -1,8 +1,12 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run days-diff
 
-# How old are you in a number of days? It's easy to calculate - just subtract your birthday from today. We could make    this a real challenge though and count the difference between any dates.
+# How old are you in a number of days? It's easy to calculate - just subtract your birthday from today. We could make
+# this a real challenge though and count the difference between any dates.
 # 
-# You are given two dates as an array with three numbers - a year, month and day. For example: 19 April 1982 will be    (1982, 4, 19). You should find the difference in days between the given dates. For example between today and    tomorrow = 1 day. The difference will always be either a positive number or zero, so don't forget about the absolute    value.
+# You are given two dates as an array with three numbers - a year, month and day. For example: 19 April 1982 will be
+# (1982, 4, 19). You should find the difference in days between the given dates. For example between today and
+# tomorrow = 1 day. The difference will always be either a positive number or zero, so don't forget about the absolute
+# value.
 # 
 # Input:Two dates as tuples of integers.
 # 
@@ -13,15 +17,17 @@
 # 
 # END_DESC
 
-from datetime import date
+import datetime
+
 
 def days_diff(a, b):
     # your code here
-    d0 = date(a)
-    d1 = date(b)
-    print(d0, d1)
-#    delta = d1 - d0
-#    return delta.days
+    a_year, a_month, a_day = a
+    b_year, b_month, b_day = b
+    d0 = datetime.datetime(a_year, a_month, a_day)
+    d1 = datetime.datetime(b_year, b_month, b_day)
+    delta = abs(d1 - d0)
+    return delta.days
 
 
 if __name__ == '__main__':
