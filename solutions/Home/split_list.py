@@ -1,6 +1,7 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run split-list
 
-# You have to split a given array into two arrays. If it has an odd amount of elements, then the first array should have more elements. If it has no elements, then two empty arrays should be returned.
+# You have to split a given array into two arrays. If it has an odd amount of elements, then the first array should
+# have more elements. If it has no elements, then two empty arrays should be returned.
 # 
 # 
 # 
@@ -13,7 +14,13 @@
 
 def split_list(items: list) -> list:
     # your code here
-    return [items]
+    if len(items) == 0:
+        return [[], []]
+    if len(items) % 2 == 0:
+        new_length = int(len(items)/2)
+    else:
+        new_length = int(len(items)//2) + 1
+    return [items[:new_length], items[new_length:]]
 
 
 if __name__ == '__main__':
