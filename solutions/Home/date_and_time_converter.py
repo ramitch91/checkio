@@ -48,6 +48,7 @@ def date_time(time: str) -> str:
 
     return time_string
 
+
 if __name__ == "__main__":
     print("Example:")
     print(date_time("01.01.2000 00:00"))
