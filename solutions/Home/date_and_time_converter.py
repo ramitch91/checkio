@@ -18,12 +18,35 @@
 # 0 <= minutes < 60
 # 
 # 
-# END_DESC
+# END_DESCRIPTION
+
+import datetime
+
 
 def date_time(time: str) -> str:
     # replace this for solution
-    return time
 
+    # Get the datetime object of the string entered
+    time_format = "%d.%m.%Y %H:%M"
+    date_object = datetime.datetime.strptime(time, time_format)
+
+    # Test hours to see if 1 or not
+    if date_object.hour == 1:
+        print_hours = 'hour'
+    else:
+        print_hours = "hours"
+
+    # Test minutes to see if 1 or not
+    if date_object.minute == 1:
+        print_minutes = 'minute'
+    else:
+        print_minutes = "minutes"
+
+    # Set the time string to a more readable format
+    string_format = f"%-d %B %Y year %-H {print_hours} %-M {print_minutes}"
+    time_string = datetime.datetime.strftime(date_object, string_format)
+
+    return time_string
 
 if __name__ == "__main__":
     print("Example:")
