@@ -12,8 +12,17 @@
 # END_DESC
 
 def is_ascending(items: list[int]) -> bool:
-    # your code here
-    return None
+    if len(items) == 0:
+        return True
+    sorted_items = sorted(items)
+    if sorted_items == items:
+        new_items = []
+        for item in items:
+            if item not in new_items:
+                new_items.append(item)
+        if len(items) == len(new_items):
+            return True
+    return False
 
 
 print("Example:")
