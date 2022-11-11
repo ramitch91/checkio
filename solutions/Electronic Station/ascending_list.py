@@ -1,12 +1,14 @@
 #!/home/ricky/programs/python/checkio/venv/bin/checkio --domain=py run ascending-list
 
-# Determine whether the list of elements is ascending such that each of its elements    is strictly larger than (and not merely equal to) the preceding element.    Empty list consider as ascending.
+# Determine whether the list of elements is ascending such that each of its elements    is strictly larger than (and
+# not merely equal to) the preceding element.    Empty list consider as ascending.
 # 
 # Input:List with ints.
 # 
 # Output:Bool.
 # 
-# The mission was taken from Python CCPS 109 Fall 2018. It is taught for Ryerson Chang School of Continuing Education byIlkka Kokkarinen
+# The mission was taken from Python CCPS 109 Fall 2018. It is taught for Ryerson Chang School of Continuing Education
+# byIlkka Kokkarinen
 # 
 # 
 # END_DESC
