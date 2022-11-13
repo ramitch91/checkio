@@ -29,8 +29,9 @@ def index_power(array: list, n: int) -> int:
     """
         Find Nth power of the element with index N.
     """
-
-    return None
+    if n > len(array) - 1:
+        return -1
+    return array[n] ** n
 
 
 if __name__ == '__main__':
